@@ -1,0 +1,33 @@
+.radio-container {
+    font-family: Arial, sans-serif;
+}
+
+.radio-label {
+    display: block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid rgb(37, 34, 34);
+    border-radius: 10px;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-text {
+    padding: 10px;
+    display: block;
+}
+
+.radio-label:hover .radio-text {
+    background-color: #239445;
+    color: #ccdbfa;
+}
+
+.radio-input:checked + .radio-text {
+    background-color: #080a94;
+    color: #ffffff;
+}

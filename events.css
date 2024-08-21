@@ -1,0 +1,286 @@
+ * {
+     box-sizing: border-box;
+}
+/* Style the body */
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 0;
+}
+ .cheader {
+     width: 100%;
+     position: sticky;
+     top: 0;
+     background: #FFF;
+}
+ .header img {
+     float: right;
+     width: 200px;
+}
+ .header h1 {
+     position: relative;
+     top: 10px;
+     left: 10px;
+     font-size: 50px;
+     font-family: 'Titillium Web';
+}
+/* Header/logo Title */
+ .header {
+     padding: 0px;
+     text-align: center;
+     background: #FFF;
+    /*background-image:linear-gradient(to bottom right,#333,#FFF);
+     */
+     color: #ec1b30;
+}
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+ .navbar {
+     overflow: hidden;
+     background-color: #666;
+     background-image: linear-gradient(#999, #aaa,#999 );
+     font-size: 22px;
+}
+/* Style the navigation bar links */
+ .navbar a {
+     float: left;
+     display: block;
+     color: white;
+     text-shadow: 0px 0px 5px #000;
+     font-weight: bold;
+     text-align: center;
+     padding: 10px 30px;
+     text-decoration: none;
+}
+/* Right-aligned link */
+ .navbar a.right {
+     float: left;
+}
+/* Change color on hover */
+ .navbar a:hover {
+     background-color: #aaa;
+     background-image: linear-gradient(#222, #333 , #222);
+     text-shadow: 0px 0px 15px #111;
+     color: 555;
+}
+/* Active/current link */
+ .navbar a.active {
+     background-color: #999;
+     background-image: linear-gradient(#333, #222 , #333);
+     color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+    .cheader {
+        width: 100%;
+        position: relative;
+        top: 0;
+        background: #FFF;
+    }
+    .header img {
+        float: right;
+        width: 180px;
+    }
+    .header h1 {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        font-family: 'Titillium Web';
+    }
+    .navbar {
+        width:100%;
+        overflow: hidden;
+        background-color: #666;
+        background-image: linear-gradient(#999, #aaa,#999 );
+        font-size: 20px;
+    }
+}
+/* Column container */
+ .row {
+     display: -ms-flexbox;
+    /* IE10 */
+     display: flex;
+     -ms-flex-wrap: wrap;
+    /* IE10 */
+     flex-wrap: wrap;
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+ .side {
+     -ms-flex: 30%;
+    /* IE10 */
+     flex: 30%;
+     background-color: #f1f1f1;
+     padding: 20px;
+}
+/* Main column */
+ .main {
+     -ms-flex: 70%;
+    /* IE10 */
+     flex: 70%;
+     background-color: white;
+     padding: 20px;
+}
+/* Fake image, just for this example */
+ .fakeimg {
+     background-color: #aaa;
+     width: 100%;
+     padding: 20px;
+}
+/* Footer */
+ .footer {
+     padding: 20px;
+     text-align: center;
+     background: #ddd;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 700px) {
+     .row {
+         flex-direction: column;
+    }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 400px) {
+     .navbar a {
+         float: none;
+         width: 100%;
+    }
+}
+ .event {
+     background-color: #f1f1f1;
+     margin: 20px;
+     padding: 10px;
+     border-radius: 12px;
+     border-style : solid;
+}
+ .event:hover {
+     background-color: #d1d1d1;
+}
+ .event-title {
+     font-size: 18px;
+     font-weight: bold;
+     background-color: #ddd;
+     border: 2px solid #333;
+     border-style: double none double none;
+     color: #333;
+}
+ .event-info {
+     margin-top: 10px;
+}
+ .abstract {
+     display: none;
+     margin-top: 10px;
+}
+ .abstract-content {
+     color : #333;
+     background-color: #e8e8e8;
+     padding: 5px;
+     border-radius: 8px;
+}
+ .show-abstract {
+     color: #007bff;
+     cursor: pointer;
+     border: 2px solid #bbb;
+     border-style: solid;
+     border-radius: 5px;
+}
+ .show-abstract:hover {
+     background-color: #ccc;
+     color: #00bbff;
+     cursor: pointer;
+     border: 2px solid #bbb;
+     border-style: solid;
+     border-radius: 5px;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+.grid {
+	display: grid;
+    /*width: 100%;*/
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.wrapper {
+	/*max-width: 75rem;*/
+	/*width: 100%;*/
+	padding: min(6rem, 5vw);
+}
+
+form {
+	padding: 1.5rem;
+	background-color: rgba(245, 245, 245);
+	border-radius: 0.5rem;
+    font-weight: bold;
+}
+label {
+    padding: 0px 15px;
+}
+legend {
+	font-weight: 700;
+    font-size:24px;
+}
+
+fieldset > * + * {
+	margin-top: .5rem;
+}
+
+form > * + * {
+	margin-top: 1.5rem;
+}
+
+.form__group {
+	display: flex;
+	align-items: center;
+}
+
+
+input[type=submit]{
+    border: none;
+    outline: none;
+    background: transparent;
+    background-color: #aa4444;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size:24px;
+}
+input[type=submit]:hover{
+
+    background-color: #992222;
+}
+input[type=email]{
+    border: solid;
+    outline: none;
+    background: transparent;
+    background-color: #fff;
+    padding: 4px 3px;
+    color: #222;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    /*font-size:24px;*/
+}
+
+input[type=name]{
+    border: solid;
+    outline: none;
+    background: transparent;
+    background-color: #fff;
+    padding: 4px 3px;
+    color: #222;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    /*font-size:24px;*/
+}
+
+
